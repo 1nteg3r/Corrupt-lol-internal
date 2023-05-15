@@ -33,4 +33,6 @@ public:
         drawList->AddPolyline(points, circlePoints, color, true, thickness);
     }
 };
+
+        
 inline Overlay overlay;

@@ -11,6 +11,11 @@ bool Object::AttackableFor(Object* const other) const {
 		&& Functions::IsAlive(this);
 }
 
+bool Object::EnemyTo(Object* const other) const {
+	return *(int32_t*)((uintptr_t)this + 0x3C) != *(int32_t*)((uintptr_t)other + 0x3C) //team
+		&& Functions::IsAlive(this);
+}
+
 float Object::health() const {
 	return *(float*)((uintptr_t)this + 0x1058);
 }
